@@ -1,8 +1,13 @@
 <?php
+//llamada a las variables de conexiones.
 require_once('db_credentials.php');
+
+//Creacion de una instancias de la clase mysqli la cual establece,
+//la conexion a bases de datos.
 
 $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 
+// instruccion para verficar si la conexion es correcta.
 if ($mysqli->connect_errno){
     echo 'Error en la conexion';
     exit;
