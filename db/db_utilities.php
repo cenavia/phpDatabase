@@ -14,7 +14,7 @@ if ($mysqli->connect_errno){
 }
 
 function run_query(){
-    global $mysqli, $result;
+    global $mysqli; //$result;
     $sql = 'SELECT * FROM productos';
     return $mysqli->query($sql);
 }
